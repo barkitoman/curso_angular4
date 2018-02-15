@@ -1,0 +1,591 @@
+.navbar-inverse{
+	background: linear-gradient(to left, #119df3, #2faefb);
+	border: none;
+	border-radius: 0;
+	margin: 0;
+}
+
+.navbar-inverse .navbar-collapse,.navbar-inverse a{
+		color: white !important
+	}
+
+.map{
+	height: 70vh;
+}
+
+span:hover{
+	cursor: pointer;
+}
+
+.Contacto{
+	font-family: 'Montserrat', sans-serif;
+	width: 70%;
+	margin: 2em auto;
+	display: -webkit-box;
+	display: flex;
+	box-shadow: 2px 4px 19px 6px #eee;
+	border-radius: 5px;
+	position: absolute;
+	left: 15%;
+	bottom: 5%;
+	height: 10%;
+	transition: all .3s;
+
+	
+}
+
+.Contacto-boton{
+    color: #129df2;
+    background: white;
+    position: absolute;
+    top: -1em;
+    width: 50px;
+    height: 50px;
+    line-height: 25px;
+    right: 2em;
+    border-radius: 50%;
+    font-size: 28px;
+    padding: .5em;
+    transition: all .3s;
+    box-shadow: 2px 4px 27px -1px #a5a3a3;
+}
+
+.Contacto-boton.active{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.Contacto-escribir{
+display: none;
+}
+
+.Contacto-informacion{
+    background: linear-gradient(to left, #119df3, #2faefb);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.Contacto-informacion-total{
+    display: none;
+}
+
+.Contacto-informacion-minimo{
+    display: none;
+}
+
+.Contacto-informacion-title{
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-left: 2em;
+    transition: all .3s;
+}
+
+.Contacto.active{
+    height: 70%;
+    background: none;
+}
+
+.Contacto.active .Contacto-container{
+    overflow: hidden;
+}
+
+.Contacto.active .Contacto-escribir{
+    background: white;
+    padding: 2em;
+    display: block;
+}
+
+.Contacto.active .Contacto-escribir-total{
+    /*---------- Desaparecer ----------*/
+    display: none;
+    transition: all .3s;
+    /*---------- Desaparecer ----------*/
+}
+
+.Contacto.active .Contacto-escribir-total.active{
+    padding: 2em 4em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+.Contacto.active .Contacto-escribir-total.active .Contacto-escribir-total-title{
+    text-transform: uppercase;
+    color: #129df2;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.Contacto.active .Contacto-escribir-total.active .Contacto-escribir-total-description{
+    color: #acacac;
+}
+
+.Contacto.active .Contacto-escribir-total.active .Contacto-escribir-total-formulario-first{
+    display: -webkit-box;
+    display: flex;
+}
+
+.Contacto.active .Contacto-escribir-total.active .Contacto-escribir-total-formulario-item{
+    border: none;
+    border-bottom: 3px solid #E5E5E4;
+    box-shadow: none;
+    margin-right: 2em;
+    margin-top: 2em;
+    transition: all .3s;
+}
+
+.Contacto.active .Contacto-escribir-total.active .Contacto-escribir-total-formulario-item--textarea{
+    border: none;
+    border-bottom: 3px solid #E5E5E4;
+    box-shadow: none;
+    margin-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    transition: all .3s;
+}
+
+.Contacto.active .Contacto-escribir-total.active .Contacto-escribir-total-formulario-item--textarea:focus{
+    box-shadow: none;
+    border-bottom: 3px solid #129df2;
+}
+
+.Contacto.active .Contacto-escribir-total.active .Contacto-escribir-total-formulario-item:focus{
+    box-shadow: none;
+    border-bottom: 3px solid #129df2;
+}
+
+.Contacto.active .Contacto-escribir-total.active .Contacto-escribir-total-formulario-enviar{
+    color: #129df2;
+    background: none;
+    border-radius: 30px;
+    padding: .8em 1.3em;
+    border: 3px solid #E5E5E4;
+    font-weight: bold;
+    font-size: 25.6px;
+    font-size: 1.6rem;
+}
+
+.Contacto.active .Contacto-escribir-minimo{
+    display: none;
+    transition: all .3s;
+}
+
+.Contacto.active .Contacto-escribir-minimo.active{
+    padding: 2em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    text-align: center;
+}
+
+.Contacto.active .Contacto-escribir-minimo.active:hover{
+    text-decoration: none;
+}
+
+.Contacto.active .Contacto-escribir-minimo.active i{
+    color: #129df2;
+    border-radius: 50%;
+    border: 1px solid #129df2;
+    width: 80px;
+    height: 80px;
+    line-height: 30px;
+    padding: .5em;
+    font-size: 40px;
+    text-align: center;
+}
+
+.Contacto.active .Contacto-escribir-minimo.active .Contacto-escribir-minimo-title{
+    color: #129df2;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+.Contacto.active .Contacto-escribir-minimo.active .Contacto-escribir-minimo-fuente{
+    padding-bottom: 1em;
+}
+
+.Contacto.active .Contacto-escribir-minimo.active .Contacto-escribir-minimo-span{
+    color: #acacac;
+    text-transform: lowercase;
+    padding-bottom: 1em;
+}
+
+.Contacto.active .Contacto-escribir-minimo.active .Contacto-escribir-minimo-correo{
+    color: #acacac;
+    font-weight: medium;
+    font-size: 20.8px;
+    font-size: 1.3rem;
+}
+
+.Contacto.active .Contacto-informacion{
+    transition: all .3s;
+}
+
+.Contacto.active .Contacto-informacion-total{
+    display: none;
+}
+
+.Contacto.active .Contacto-informacion .Contacto-informacion-title{
+    font-size: 32px;
+    font-size: 2rem;
+    padding: 2em 3em 0 3em;
+    text-align: center;
+    margin-bottom: 1em;
+    transition: all .3s;
+}
+
+.Contacto.active .Contacto-informacion .Contacto-informacion-title.active{
+    padding: 1em 3em 0 3em;
+    text-align: left;
+    font-size: 64px;
+    font-size: 4rem;
+}
+
+.Contacto.active .Contacto-informacion-total.active{
+    padding: 0 10em 4em 8em;
+    display: block;
+}
+
+.Contacto.active .Contacto-informacion-total.active .Contacto-informacion-total-row{
+    margin-top: 1em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+.Contacto.active .Contacto-informacion-total.active .Contacto-informacion-total-row-first{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+}
+
+.Contacto.active .Contacto-informacion-total.active .Contacto-informacion-total-row-item-title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 3em;
+}
+
+.Contacto.active .Contacto-informacion-total.active .Contacto-informacion-total-row-item-info{
+    color: #a0d6fd;
+    font-weight: 500;
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+.Contacto.active .Contacto-informacion-total.active .Contacto-informacion-total-sociales{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    padding: 1em 0;
+}
+
+.Contacto.active .Contacto-informacion-total.active .Contacto-informacion-total-sociales-item{
+    list-style: none;
+    font-size: 28.8px;
+    font-size: 1.8rem;
+}
+
+.Contacto.active .Contacto-informacion-total.active .Contacto-informacion-total-sociales-item a{
+    color: #a0d6fd;
+}
+
+.Contacto.active .Contacto-informacion-minimo{
+    /*---------- Desaparecer ----------*/
+    display: none;
+    transition: all .3s;
+    /*---------- Desaparecer ----------*/
+    
+}
+
+.Contacto.active .Contacto-informacion-minimo.active{
+    text-align: center;
+    padding: 1em 3em 4em 3em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+.Contacto.active .Contacto-informacion-minimo.active:hover{
+    text-decoration: none;
+}
+
+.Contacto.active .Contacto-informacion-minimo.active i{
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 80px;
+    height: 80px;
+    line-height: 40px;
+    padding: .5em;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.Contacto.active .Contacto-informacion-minimo.active .Contacto-informacion-minimo-span{
+    color: white;
+    font-size: 28.8px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-top: 1em;
+}
+
+.Contacto.active .Contacto-informacion-minimo.active .Contacto-informacion-minimo-sociales{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    padding: 2em;
+}
+
+.Contacto.active .Contacto-informacion-minimo.active .Contacto-informacion-minimo-sociales-item{
+    list-style: none;
+}
+
+.Contacto.active .Contacto-informacion-minimo.active .Contacto-informacion-minimo-sociales-item i{
+    width: 40px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+@media (min-width: 800px){
+
+    .Contacto.active .Contacto-escribir{
+        width: 30%
+    }
+
+    .Contacto.active .Contacto-escribir.active{
+        width: 70%
+    }
+
+    .Contacto.active .Contacto-informacion{
+        width: 30%
+    }
+
+    .Contacto.active .Contacto-informacion.active{
+        width: 70%
+    }
+}
+
+@media (max-width: 800px){
+	.map{
+		height: 80vh;
+	}
+	.Contacto{
+		height: 7%;
+		bottom: 10%;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
+	}
+    .Contacto.active .Contacto{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-pack: start;
+                justify-content: flex-start;
+    }
+    .Contacto.active .Contacto-escribir{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir{
+        padding: 0;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo i{
+        color: #129df2;
+        border-radius: 50%;
+        border: 1px solid #129df2;
+        width: 50px;
+        height: 50px;
+        line-height: 20px;
+        padding: .5em;
+        font-size: 25px;
+        text-align: center;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo.active{
+        padding: 2em;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo.active .Contacto-escribir-minimo-title{
+        font-size: 2.5rem;
+        padding-bottom: 0;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo.active .Contacto-escribir-minimo-fuente{
+        padding-bottom: 0;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo.active .Contacto-escribir-minimo-span{
+        font-size: 2rem;
+    }
+    .Contacto.active .Contacto-informacion{
+        width: 100%;
+        display: block;
+    }
+    .Contacto.active .Contacto-informacion.active{
+        width: 100%;
+    }
+    .Contacto.active .Contacto-informacion.active .Contacto-informacion-title{
+        font-size: 2.5rem;
+        padding: 1em 4em 0 4em;
+    }
+    .Contacto.active .Contacto-informacion-minimo.active{
+        padding: 0;
+    }
+    .Contacto.active .Contacto-informacion-minimo.active i{
+        color: white;
+        border-radius: 50%;
+        border: 1px solid white;
+        width: 40px;
+        height: 40px;
+        line-height: 20px;
+        padding: .5em;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: .5em;
+    }
+    .Contacto.active .Contacto-informacion-minimo .Contacto-informacion-minimo-sociales{
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px){
+	.map{
+		height: 100vh;
+	}
+	.Contacto{
+		height: 7%;
+	}
+    .Contacto-boton{
+        top: -1.5em;
+        width: 50px;
+        height: 50px;
+        line-height: 25px;
+        right: 1em;
+        font-size: 28px;
+        padding: .5em;
+    }
+    .Contacto-boton.active{
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+    .Contacto-informacion-title{
+        font-size: 1.3rem;
+        margin: 1em .5em;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo i{
+        width: 30px;
+        height: 30px;
+        line-height: 10px;
+        font-size: 15px;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo.active{
+        padding: .5em 1em;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo.active .Contacto-escribir-minimo-title{
+        font-size: 2rem;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-minimo.active .Contacto-escribir-minimo-span{
+        font-size: 1.5rem;
+        padding-bottom: 0;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-total.active{
+        padding: 2em;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-total.active .Contacto-escribir-total-title{
+        font-size: 2.2rem;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-total.active .Contacto-escribir-total-description{
+        display: none;
+    }
+    .Contacto.active .Contacto-escribir .Contacto-escribir-total.active .Contacto-escribir-total-formulario-first{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+    }
+
+    .Contacto.active .Contacto-informacion.active{
+        width: 100%;
+    }
+    .Contacto.active .Contacto-informacion.active .Contacto-informacion-title.active{
+        font-size: 1.8rem !important;
+        padding: 1.2em 2em 0 1.2em !important;
+        margin-bottom: 0;
+    }
+    .Contacto.active .Contacto-informacion.active .Contacto-informacion-total.active{
+        padding: 0 1.5em 1.5em 1.5em;
+    }
+    .Contacto.active .Contacto-informacion.active .Contacto-informacion-total.active .Contacto-informacion-total-row-first{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+    }
+    .Contacto.active .Contacto-informacion.active .Contacto-informacion-total.active .Contacto-informacion-total-row-item-title{
+        font-size: 1.5rem;
+    }
+        .Contacto.active .Contacto-informacion.active .Contacto-informacion-total.active .Contacto-informacion-total-row-item-title:first-child{
+            margin-top: 0;
+        }
+    .Contacto.active .Contacto-informacion.active .Contacto-informacion-total.active .Contacto-informacion-total-row-item-info{
+        font-size: 1rem;
+    }
+    .Contacto.active .Contacto-informacion-title{
+        padding: 0 2em !important;
+        font-size: 1.5rem !important;
+    }
+    .Contacto.active .Contacto-informacion-minimo.active{
+        padding: 0;
+    }
+    .Contacto.active .Contacto-informacion-minimo.active i{
+        color: white;
+        border-radius: 50%;
+        border: 1px solid white;
+        width: 40px;
+        height: 40px;
+        line-height: 20px;
+        padding: .5em;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .Contacto.active .Contacto-informacion-minimo .Contacto-informacion-minimo-span{
+        font-size: 1.5rem !important;
+        padding-top: 0 !important;
+    }
+    .Contacto.active .Contacto-informacion-minimo .Contacto-informacion-minimo-sociales{
+        width: 40%;
+        margin: 0 auto;
+        padding: 0 0 1em 0 !important;
+    }
+
+    .Contacto.active .Contacto-informacion-minimo .Contacto-informacion-minimo-sociales-item i{
+        width: 25px !important;
+        height: 25px !important;
+        line-height: 10px !important;
+        padding: .5em !important;
+        font-size: 13px !important;
+    }
+}

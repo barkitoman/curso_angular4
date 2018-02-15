@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="Contacto-escribir-total-title">Crear negocio</h1>
+    <p class="Contacto-escribir-total-description"></p>
+    <div class="Contacto-escribir-total-formulario">
+      <div class="Contacto-escribir-total-formulario-first">
+        <input class="form-control Contacto-escribir-total-formulario-item" type="text" placeholder="Nombre" [(ngModel)]="lugar.nombre"/>
+        <input class="form-control Contacto-escribir-total-formulario-item" type="text" placeholder="Distancia" [(ngModel)]="lugar.distancia"/>
+      </div>
+      <div class="Contacto-escribir-total-formulario-first">
+          <input class="form-control Contacto-escribir-total-formulario-item" type="text" placeholder="Cercania" [(ngModel)]="lugar.cercania"/>
+          <input class="form-control Contacto-escribir-total-formulario-item" type="text" placeholder="Plan" [(ngModel)]="lugar.plan"/>
+      </div>
+      <textarea class="form-control Contacto-escribir-total-formulario-item--textarea" placeholder="Descripcion" [(ngModel)]="lugar.descripcion"></textarea>
+      <h2 class="Contacto-escribir-total-subTitle">Datos de Direccion</h2>
+      <div class="card card-body row">
+            <form>
+              <h3>Buscar Direccion en Google Maps</h3>
+              <input [formControl]="searchField" class="form-control Contacto-escribir-total-formulario-item" type="text">
+            </form>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let result of results$ | async" (click)="seleccionarDireccion(result)">{{result.formatted_address}}</li>
+            </ul>
+        </div>
+      <div class="Contacto-escribir-total-formulario-first">
+          <input class="form-control Contacto-escribir-total-formulario-item" type="text" placeholder="Calle y numero" [(ngModel)]="lugar.calle"/>
+          <input class="form-control Contacto-escribir-total-formulario-item" type="text" placeholder="Ciudad" [(ngModel)]="lugar.ciudad"/>
+      </div>
+      <input class="form-control Contacto-escribir-total-formulario-item" type="text" placeholder="Pais" [(ngModel)]="lugar.pais"/>
+      <button class="btn Contacto-escribir-total-formulario-btn" type="submit" (click)="guardarLugar()">{{nombreBtn}}</button>
+      <button class="btn Contacto-escribir-total-formulario-cancelar" type="submit" routerLink="/lugares">Cancelar</button>
+    </div>
+</div>
+ 

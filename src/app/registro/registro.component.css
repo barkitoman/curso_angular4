@@ -1,0 +1,60 @@
+.Contacto-escribir-total-title{
+    font-size: 2.2rem;
+}
+
+.Contacto-escribir-total-subTitle{
+    font-size: 2.2rem;
+}
+
+.Contacto-escribir-total-subTitle{
+    text-transform: uppercase;
+    color: #129df2;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.Contacto-escribir-total-title{
+    text-transform: uppercase;
+    color: #129df2;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.Contacto-escribir-total-description{
+    color: #acacac;
+}
+
+.Contacto-escribir-total-formulario-first{
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+}
+
+.Contacto-escribir-total-formulario-item{
+    border: none;
+    border-bottom: 3px solid #E5E5E4;
+    box-shadow: none;
+    margin-right: 2em;
+    margin-top: 2em;
+    transition: all .3s;
+}
+
+.Contacto-escribir-total-formulario-item--textarea{
+    border: none;
+    border-bottom: 3px solid #E5E5E4;
+    box-shadow: none;
+    margin-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    transition: all .3s;
+}
+.Contacto-escribir-total-formulario-item--textarea:focus{
+    box-shadow: none;
+    border-bottom: 3px solid #129df2;
+}
+
+.Contacto-escribir-total-formulario-item:focus{
+    box-shadow: none;
+    border-bottom: 3px solid #129df2;
+}
+

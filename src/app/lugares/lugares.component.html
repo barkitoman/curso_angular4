@@ -1,0 +1,40 @@
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker *ngFor="let lugar of lugares" [latitude]="lugar.lat" [longitude]="lugar.lng"></agm-marker>
+</agm-map>
+<hr />
+<div class="container">
+  <a class="btn Contacto-escribir-total-formulario-btn" routerLink="/crear/new">Crear nuevo negocio</a>
+  <div class="row">
+    
+    <div class="col-md-8">
+      <h2>lugares cercanos</h2>
+      <ul class="list-group">
+          <ng-container *ngFor="let lugar of lugares">
+            
+              <li  class="list-group-item">
+                <a routerLink="/crear/{{lugar.id}}"><h3>{{lugar.nombre}}
+                  <span class="fa fa-star pull-right" *ngIf="lugar.plan == 'Pagado'"></span></h3> 
+                </a>
+                <small style="color:black">Creado: {{lugar.id | date:'mediumTime' | uppercase}}</small>
+                <p style="color:black" [innerHtml]="lugar.descripcion | linkifystr"></p>
+              </li>
+           
+          </ng-container>
+        </ul>
+    </div>
+    <div class="col-md-4" [@contenedorAnimable1]= "state">
+      <h2>Destacados</h2>
+      <ng-container *ngFor="let lugar of lugares">
+          <div  class="bg-warning padding" *ngIf="lugar.plan == 'Pagado'">
+              <a routerLink="/crear/{{lugar.id}}">
+                {{lugar.nombre}}
+                <span class="fa fa-star pull-right" *ngIf="lugar.plan == 'Pagado'"></span>
+              </a>
+              <p style="color:black" [innerHtml]="lugar.descripcion"></p>
+          </div>
+      </ng-container>
+    </div>
+  </div>
+  <div id="cuadrado" [@contenedorAnimable]= "state" (@contenedorAnimable.start)="animacionInicia($event)" (@contenedorAnimable.done)="animacionTermina($event)" ></div>
+<a class="btn Contacto-escribir-total-formulario-btn" (click)="animar()">Animar</a>
+</div>

@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+agm-map {
+    height: 300px;
+}
+
+.numero_par{
+    background-color: aliceblue;
+    color: blue;
+}
+
+.Contacto-escribir-total-formulario-btn{
+    color: #129df2;
+    background: none;
+    border-radius: 30px;
+    padding: .8em 1.3em;
+    border: 3px solid #E5E5E4;
+    font-weight: bold;
+    font-size: 25.6px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Contacto-escribir-total-formulario-btn:hover{
+    color: #ffffff;
+    background: none;
+    border-radius: 30px;
+    padding: .8em 1.3em;
+    border: 3px solid #129df2;
+    background: #129df2;
+    font-weight: bold;
+    font-size: 25.6px;
+    font-size: 0.9rem;
+    transition: all .3s;
+}
+
+.Contacto-escribir-total-formulario-cancelar{
+    color: #ee1212;
+    background: none;
+    border-radius: 30px;
+    padding: .8em 1.3em;
+    border: 3px solid #E5E5E4;
+    font-weight: bold;
+    font-size: 25.6px;
+    font-size: 0.9rem;
+}
+
+.Contacto-escribir-total-formulario-cancelar:hover{
+    color: #ffffff;
+    background: none;
+    border-radius: 30px;
+    padding: .8em 1.3em;
+    border: 3px solid #ee1212;
+    background: #ee1212;
+    font-weight: bold;
+    font-size: 25.6px;
+    font-size: 0.9rem;
+    transition: all .3s;
+}

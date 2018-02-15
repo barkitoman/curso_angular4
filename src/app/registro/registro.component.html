@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 card card-body">
+          <label>Email</label>
+          <input type="email" class="form-control Contacto-escribir-total-formulario-item" [(ngModel)]="registro.email">
+          <label>Contraseña</label>
+          <input type="password" class="form-control Contacto-escribir-total-formulario-item" [(ngModel)]="registro.password">
+          <button class="btn Contacto-escribir-total-formulario-btn" type="submit" (click)="registrar()">Registrarme</button>
+          <button class="btn Contacto-escribir-total-formulario-cancelar" type="submit" routerLink="/lugares">Cancelar</button>
+    </div>
+  </div>
+</div>
+  

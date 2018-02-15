@@ -1,0 +1,109 @@
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.6516137294834!2d-74.05959178477983!3d4.656066296617825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a4333a1a275%3A0x91a59c01b85e3f59!2sPlatzi!5e0!3m2!1ses!2sve!4v1513777546521" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
+
+<section class="Contacto" id="Contacto" [ngClass]="{
+  'active':isShowContent == true}">
+  <span class="fa fa-plus Contacto-boton" (click)="showView()"  [ngClass]="{
+    'active':isShowContent == true}"></span>
+  <div class="Contacto-escribir" id="contacto-escribir" [ngClass]="{
+    'active':isShowForm == true}">
+    <div class="Contacto-escribir-total" id="escribir-total"[ngClass]="{
+      'active':isShowForm == true}">
+      <h1 class="Contacto-escribir-total-title">Contactar</h1>
+      <p class="Contacto-escribir-total-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt cumque, ipsum eligendi libero rerum! Ipsam laudantium excepturi.</p>
+      <form class="Contacto-escribir-total-formulario">
+        <div class="Contacto-escribir-total-formulario-first">
+          <input class="form-control Contacto-escribir-total-formulario-item" type="text" placeholder="Nombre"/>
+          <input class="form-control Contacto-escribir-total-formulario-item" type="email" placeholder="Email"/>
+        </div>
+        <textarea class="form-control Contacto-escribir-total-formulario-item--textarea" placeholder="Mensaje"></textarea>
+        <button class="btn Contacto-escribir-total-formulario-enviar" type="submit">Enviar</button>
+      </form>
+    </div><span class="Contacto-escribir-minimo active" [ngClass]="{
+      'active':isShowForm == false}" id="contacto" (click)="showForm()">
+      <h1 class="Contacto-escribir-minimo-title">Escribenos</h1>
+      <div class="Contacto-escribir-minimo-fuente"><i class="fa fa-envelope-open"></i></div>
+      <h3 class="Contacto-escribir-minimo-span">Click para iniciar</h3><small class="Contacto-escribir-minimo-correo">platzisquare@contacto.com</small></span>
+  </div>
+  <div class="Contacto-informacion active" id="contacto-informacion" [ngClass]="{
+    'active':isShowForm == false}">
+    <h1 class="Contacto-informacion-title active" id="titulo" [ngClass]="{
+      'active':isShowForm == false}">Informacion de contacto</h1><span class="Contacto-informacion-minimo" id="informacion" [ngClass]="{
+      'active':isShowForm == true}"  (click)="showForm()">
+      <div class="Contacto-informacion-minimo-fuente"><i class="fa fa-info"></i></div><span class="Contacto-informacion-minimo-span">Click para ver</span>
+      <ul class="Contacto-informacion-minimo-sociales">
+        <li class="Contacto-informacion-minimo-sociales-item"><i class="fa fa-facebook"></i></li>
+        <li class="Contacto-informacion-minimo-sociales-item"><i class="fa fa-twitter"></i></li>
+        <li class="Contacto-informacion-minimo-sociales-item"><i class="fa fa-globe"></i></li>
+      </ul></span>
+    <div class="Contacto-informacion-total active" id="informacion-minimo" [ngClass]="{
+      'active':isShowForm == false}">
+      <div class="Contacto-informacion-total-row">
+        <div class="Contacto-informacion-total-row-first">
+          <div class="Contacto-informacion-total-row-item">
+            <h2 class="Contacto-informacion-total-row-item-title">Llamanos</h2>
+            <p class="Contacto-informacion-total-row-item-info">555-0125</p>
+          </div>
+          <div class="Contacto-informacion-total-row-item">
+            <h2 class="Contacto-informacion-total-row-item-title">Visitanos</h2>
+            <p class="Contacto-informacion-total-row-item-info">Platzi Avenida Calle 72, Bogotá, Bogotá, Colombia</p>
+          </div>
+        </div>
+        <div class="Contacto-informacion-total-row-item">
+          <h2 class="Contacto-informacion-total-row-item-title">Envianos un mensaje</h2>
+          <p class="Contacto-informacion-total-row-item-info">platzisquare@contacto.com</p>
+        </div>
+      </div>
+      <ul class="Contacto-informacion-total-sociales">
+        <li class="Contacto-informacion-total-sociales-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li class="Contacto-informacion-total-sociales-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="Contacto-informacion-total-sociales-item"><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li class="Contacto-informacion-total-sociales-item"><a href="#"><i class="fa fa-globe"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  const contacto = document.getElementById('contacto');
+  const informacion = document.getElementById('informacion');
+  const escribirTotal = document.getElementById('escribir-total');
+  const titulo = document.getElementById('titulo');
+  const informacionMinimo = document.getElementById('informacion-minimo');
+  const contactoEscribir = document.getElementById('contacto-escribir');
+  const contactoInformacion = document.getElementById('contacto-informacion');
+  const $contacto = document.getElementById('Contacto');
+  const $toggle = document.getElementById('toggle');
+
+  contacto.addEventListener('click', toggle);
+  informacion.addEventListener('click', toggle);
+  $toggle.addEventListener('click', toggleContacto);
+  //info = document.addEventListener('click', toggle);
+  function toggle(){
+    contacto.classList.toggle('active');
+    informacion.classList.toggle('active');
+    escribirTotal.classList.toggle('active');
+    titulo.classList.toggle('active');
+    informacionMinimo.classList.toggle('active');
+    contactoInformacion.classList.toggle('active');
+    contactoEscribir.classList.toggle('active');
+  };
+  function toggleContacto() {
+    $contacto.classList.toggle('active');
+    $toggle.classList.toggle('active');
+    
+    console.log("Contacto")
+  }
+</script>
+<!-- <br />
+<div class="container">
+  <label for="">Nombre</label>
+  <input type="text" class="form-control">
+  <br />
+  <label for="">Correo</label>
+  <input type="text" class="form-control">
+  <label for="">Nombre</label>
+  <textarea class="form-control"></textarea>
+  <hr />
+  <button type="button"  class="btn btn-primary">Enviar</button>
+  
+  <button type="button" class="btn btn-light" routerLink="/lugares">Cancelar</button>
+</div> -->

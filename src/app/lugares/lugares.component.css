@@ -1,0 +1,19 @@
+.container{
+    font-size: 0.9rem;
+}
+
+#cuadrado{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.pull-right{
+    font-size: 0.6em;
+    color: rgba(0, 38, 255);
+}
+.padding{
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+}
