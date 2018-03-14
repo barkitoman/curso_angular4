@@ -15,7 +15,7 @@
       <div class="card card-body row">
             <form>
               <h3>Buscar Direccion en Google Maps</h3>
-              <input [formControl]="searchField" class="form-control Contacto-escribir-total-formulario-item" type="text">
+              <input [formControl]="searchField" class="form-control Contacto-escribir-total-formulario-item" type="text"  #referent>
             </form>
             <ul class="list-group">
                 <li class="list-group-item" *ngFor="let result of results$ | async" (click)="seleccionarDireccion(result)">{{result.formatted_address}}</li>

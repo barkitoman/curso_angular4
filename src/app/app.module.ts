@@ -23,7 +23,12 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { AutorizacionService } from './services/autorizacion.service';
 import { MyGuardService } from './services/my-guard.service';
- 
+import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
+//import { HTTP_INTERCEPTORS } from '@angular/common/http/src/interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyInterceptor } from './services/my-interceptor';
+import {ToasterModule} from 'angular5-toaster';
+
 const appRoutes: Routes = [
   {path:'', component: LugaresComponent},
   {path:'lugares', component: LugaresComponent},
@@ -68,9 +73,17 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgHttpLoaderModule,
+    ToasterModule
   ],
-  providers: [LugaresService, AutorizacionService, MyGuardService],
+  providers: [LugaresService, AutorizacionService, MyGuardService,
+    { 
+      provide: HTTP_INTERCEPTORS, 
+      useClass: MyInterceptor, 
+      multi: true 
+    } 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

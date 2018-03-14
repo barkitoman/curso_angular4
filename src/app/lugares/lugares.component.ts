@@ -58,15 +58,15 @@ export class LugaresComponent implements OnInit {
   constructor(private lugaresService: LugaresService){
     //this.lugares = lugaresService.getLugares();
     //In case de usar http
-    lugaresService.getLugares().valueChanges()
+  }
+  ngOnInit(){
+    this.lugares = [];
+    this.lugaresService.getLugares().valueChanges()
       .subscribe(lugares => {
         this.lugares = lugares;
         // var me =  this;
         // me.lugares = Object.keys(me.lugares).map(function (key) { return me.lugares[key]; });
         this.state = 'final';
       })
-  }
-  ngOnInit(){
-    this.lugares = {}
   }
 }

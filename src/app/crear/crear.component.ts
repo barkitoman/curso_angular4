@@ -6,6 +6,8 @@ import 'rxjs/Rx';
 import { FormControl } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http/src/response';
+import { Apiresponse } from '../interfaces/apiresponse';
+
 
 @Component({ 
   selector: 'app-crear',
@@ -24,23 +26,30 @@ export class CrearComponent implements OnInit {
     if (this.id != 'new')
     {
       this.nombreBtn = 'Editar'
-      debugger;
-      this.lugaresService.getLugar(this.id).valueChanges().subscribe(lugar => {
-        this.lugar = lugar;
-        
+      this.lugaresService.getLugar(this.id)
+        .valueChanges()
+        .subscribe(lugar => {
+          this.lugar = lugar;
       });
     }else{
       this.nombreBtn = 'Guardar'
     }
-    const URL = 'https://maps.google.com/maps/api/geocode/json';
+   
     this.searchField = new FormControl();
-    this.results$ = this.searchField.valueChanges
-        .debounceTime(500)
-        .switchMap(query => this.http.get(`${URL}?address=${query}`))
-        .map(response => response["results"]);
+    
   }
 
   ngOnInit() {
+    const URL = 'https://maps.google.com/maps/api/geocode/json';
+    Observable.fromEvent(this.referent, "click");
+    this.results$ = this.searchField.valueChanges
+        .debounceTime(500)
+        .switchMap(query => this.http.get(`${URL}?address=${query}`))
+        .map((response:Apiresponse) => response.results)
+        .catch((error) => {
+          console.log(error);
+          return Observable.of([]);
+        });
   }
  
   guardarLugar(){
